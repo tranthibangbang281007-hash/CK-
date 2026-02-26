@@ -81,14 +81,7 @@ class PenaltyWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    thong_tin_mau = {
-        'hoten': 'Nguyễn Văn A',
-        'sdt': '0123456789',
-        'tensach': 'Lập trình Python',
-        'masach': 'PY001',
-        'ngay_muon': '01/02/2026',
-        'ngay_tra_du_kien': '15/02/2026'
-    }
-    window = PenaltyWindow(thong_tin_mau)
+    window = PenaltyWindow()
     window.show()
+
     sys.exit(app.exec())

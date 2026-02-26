@@ -148,14 +148,7 @@ class TimeInfoWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    thong_tin_mau = {
-        'hoten': 'Nguyễn Văn A',
-        'sdt': '0123456789',
-        'cmt': '123456789',
-        'tensach': 'Lập trình Python',
-        'masach': 'PY001',
-        'diachi': 'Hà Nội'
-    }
-    window = TimeInfoWindow(thong_tin_mau)
+    window = TimeInfoWindow()
     window.show()
+
     sys.exit(app.exec())

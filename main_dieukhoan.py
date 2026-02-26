@@ -40,7 +40,7 @@ class TermsWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    thong_tin_mau = {'hoten': 'Test'}
-    window = TermsWindow(thong_tin_mau)
+    window = TermsWindow()
     window.show()
+
     sys.exit(app.exec())
