@@ -60,7 +60,7 @@ class BankTransferWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    thong_tin_mau = {'sdt': '0123456789', 'masach': 'PY001'}
-    window = BankTransferWindow(thong_tin_mau)
+    window = BankTransferWindow()
     window.show()
+
     sys.exit(app.exec())
