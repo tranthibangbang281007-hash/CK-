@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="pic1">
+    <file>KTLT(4).png</file>
+    <file>KTLT(3).png</file>
+  </qresource>
+</RCC>
