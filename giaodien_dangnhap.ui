@@ -19,6 +19,12 @@
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">/* Đổi toàn bộ chữ của Tiêu đề (Label), Ô nhập chữ (LineEdit) và Nút bấm (PushButton) thành màu đen */
+QLabel, QLineEdit, QPushButton {
+    color: black;
+}</string>
+   </property>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
@@ -35,7 +41,7 @@
 }</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="formLayoutWidget">
