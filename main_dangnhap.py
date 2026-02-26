@@ -17,7 +17,8 @@ class LoginWindow(QMainWindow):
         self.txtmk.setEchoMode(QLineEdit.EchoMode.Password)
 
         self.btndangki.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
-        self.btnquenmk.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2)        self.btnquaylai.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.btnquenmk.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
+        self.btnquaylai.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
 
         self.btndangnhap.clicked.connect(self.xu_ly_dang_nhap)
         self.btnxacnhandk.clicked.connect(self.xu_ly_dang_ky)

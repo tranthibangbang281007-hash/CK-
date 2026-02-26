@@ -29,11 +29,6 @@ class MainWindow(QMainWindow):
         self.mh_tra.show()
         self.hide()
 
-    # def mo_lich_su(self):
-    #     from main_lichsu import HistoryWindow
-    #     self.mh_su = HistoryWindow()
-    #     self.mh_su.show()
-    #     self.hide()
     def mo_lich_su(self):
         try:
             # Import và mở màn hình

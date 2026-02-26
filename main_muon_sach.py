@@ -23,7 +23,7 @@ class RentBookWindow(QMainWindow):
         self.datetra.dateChanged.connect(self.tinh_tien)
         self.tinh_tien()
 
-        self.btnycmuon.clicked.connect(self.xem_truoc_khi_luu)
+        self.btnycmuon.clicked.connect(self.yeucauthanhcong)
         self.btnquaylai.clicked.connect(self.quay_lai_sua)
         self.btnhoantat.clicked.connect(self.luu_phieu_that)
         self.btnquaylai_2.clicked.connect(self.ve_menu)
@@ -36,33 +36,14 @@ class RentBookWindow(QMainWindow):
         if so_ngay <= 0:
             so_ngay = 1
 
-        thanh_tien = so_ngay * 5000
+        thanh_tien = so_ngay * 10000
         chuoi_tien = f"{thanh_tien:,}"
         self.txttongtien.setText(chuoi_tien)
         return chuoi_tien
 
-    def xem_truoc_khi_luu(self):
-        hoten = self.txthoten.text().strip()
-        sdt = self.txtsdt.text().strip()
-        tensach = self.txttensach.text().strip()
-        masach = self.txtmasach.text().strip()
-        diachi = self.txtdiachi.text().strip()
-        cmt = self.txtcmt.text().strip()
-        if not hoten or not sdt or not masach:
-            QMessageBox.warning(self, "Thiếu thông tin", "Vui lòng nhập đủ thông tin trước khi xem phiếu!")
-            return
+    def yeucauthanhcong(self):
+        pass
 
-        self.viewhoten.setText(hoten)
-        self.viewsdt.setText(sdt)
-        self.viewtensach.setText(tensach)
-        self.viewmasach.setText(masach)
-        self.viewdiachi.setText(diachi)
-        self.viewcmt.setText(cmt)
-
-        self.viewngaymuon.setText(self.datemuon.date().toString("dd/MM/yyyy"))
-        self.viewngaytra.setText(self.datetra.date().toString("dd/MM/yyyy"))
-        self.viewtongtien.setText(self.tinh_tien())
-        self.stackedWidget.setCurrentIndex(1)
 
     def quay_lai_sua(self):
         self.stackedWidget.setCurrentIndex(0)

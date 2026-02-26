@@ -17,17 +17,38 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {
+    border-image: url(mhlichsu.png);
+}</string>
+   </property>
    <widget class="QTableWidget" name="tbllichsu">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>70</x>
       <y>40</y>
       <width>391</width>
       <height>301</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(170, 255, 255);</string>
+     <string notr="true">/* 1. Làm trong suốt lớp vỏ ngoài của bảng và bỏ viền */
+QTableWidget {
+    background-color: transparent;
+    border: none;
+}
+
+/* 2. Làm trong suốt phần lõi bên trong (Nơi chứa các dòng dữ liệu) - Cực kỳ quan trọng */
+QTableWidget::viewport {
+    background-color: transparent;
+}
+/* Phủ một lớp kính mờ lên thanh tiêu đề cột cho dễ đọc */
+QHeaderView::section {
+    background-color: rgba(255, 255, 255, 150); 
+    border: none;
+    border-right: 1px solid white; /* Dấu kẻ vạch chia cột */
+    padding: 5px;
+}</string>
     </property>
     <column>
      <property name="text">
