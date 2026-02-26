@@ -57,11 +57,7 @@ class PenaltyTransferWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    thong_tin_mau = {
-        'sdt': '0123456789', 
-        'masach': 'PY001',
-        'so_ngay_qua_han': 5
-    }
-    window = PenaltyTransferWindow(thong_tin_mau)
+    window = PenaltyTransferWindow()
     window.show()
+
     sys.exit(app.exec())
